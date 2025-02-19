@@ -5,38 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Era7capone Şarkıları</title>
   <style>
-    /* Temel Stil */
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
       margin: 0;
       padding: 0;
       overflow-x: hidden;
-      transition: background-color 0.3s, color 0.3s;
+      text-align: center;
     }
     .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 20px;
-      width: 100%;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
     }
     .song-box {
       background-color: #fff;
-      margin: 10px;
+      margin: 20px auto;
       padding: 20px;
-      width: 250px;
+      width: 90%;
+      max-width: 600px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
-      transition: transform 0.3s ease;
-      margin-bottom: 20px;
-    }
-    .song-box:hover {
-      transform: translateY(-10px);
     }
     .song-title {
-      font-size: 18px;
+      font-size: 22px;
       font-weight: bold;
       margin-bottom: 10px;
     }
@@ -45,7 +38,7 @@
       margin: 5px 0;
       text-decoration: none;
       color: #1DB954;
-      font-size: 14px;
+      font-size: 16px;
     }
     .song-links a:hover {
       color: #1A803D;
@@ -53,17 +46,8 @@
     .song-image {
       width: 100%;
       height: auto;
-      border-radius: 5px;
-      margin-bottom: 10px;
-    }
-    .scroll-container {
-      max-height: 600px;
-      width: 100%;
-      margin-top: 80px; /* Daha fazla boşluk ekledim */
-      padding-right: 10px;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
+      border-radius: 10px;
+      margin-bottom: 15px;
     }
     .by-arda {
       position: fixed;
@@ -77,93 +61,29 @@
     .by-arda:hover {
       text-decoration: underline;
     }
-    .footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 16px;
-      color: #333;
-    }
-    .footer a {
-      color: blue;
-      text-decoration: none;
-    }
-    .footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Profil ve Sanatçı Bilgileri */
     .profile {
-      text-align: center;
-      margin-top: 40px;
       background-color: #222;
-      padding: 20px;
+      padding: 30px;
       border-radius: 15px;
-      max-width: 800px;
+      max-width: 900px;
       margin: 40px auto;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      color: #eaeaea;
     }
-
     .artist-image {
-      width: 180px;
-      height: 180px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       margin-bottom: 20px;
       object-fit: cover;
       border: 4px solid #1DB954;
     }
-
-    .profile h2 {
-      font-size: 24px;
-      font-weight: bold;
-      color: #eaeaea;
-      margin-bottom: 10px;
-    }
-
-    .profile p {
-      font-size: 16px;
-      color: #eaeaea;
-      line-height: 1.6;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .profile a {
-      font-size: 16px;
+    .profile h2 a {
       color: #1DB954;
       text-decoration: none;
     }
-
     .profile a:hover {
       text-decoration: underline;
-    }
-
-    .no-cap {
-      font-size: 12px;
-      color: rgba(255, 255, 255, 0.5); /* Şeffaflık artırıldı */
-      font-style: italic;
-      margin-top: 5px;
-    }
-
-    /* Karanlık Mod */
-    body.dark-mode {
-      background-color: #121212;
-      color: #eaeaea;
-    }
-    .song-box.dark-mode {
-      background-color: #333;
-      color: #eaeaea;
-    }
-    .song-links a.dark-mode {
-      color: #1DB954;
-    }
-    .song-links a.dark-mode:hover {
-      color: #1A803D;
-    }
-    .by-arda.dark-mode {
-      color: #1DB954;
-    }
-    .footer.dark-mode {
-      color: #eaeaea;
     }
   </style>
 </head>
@@ -172,77 +92,66 @@
   <a href="https://www.instagram.com/ardaa.b7/" class="by-arda" target="_blank">By ArdaBayrak</a>
 
   <div class="profile">
-    <!-- Sanatçı Resmi -->
     <img src="era7.jpg" alt="Era7capone Sanatçı" class="artist-image">
-    
-    <!-- Sanatçı Bilgileri -->
     <h2><a href="https://www.instagram.com/era7caponeofficial" target="_blank">Era7Capone</a></h2>
-    <p>Era7Capone, gerçek adı Eray Durmuş olan genç bir rap sanatçısıdır. 2 Nisan 2000 tarihinde Muğla'nın Bodrum ilçesinde doğan Eray, müzik dünyasında hızla yükselmiştir. Kariyerine rap müziğiyle adım atan Era7Capone, Bodrum block, Kan, Para Yapmakta, ve No Cap gibi dikkat çeken parçalarıyla geniş bir dinleyici kitlesine ulaşmıştır.</p>
-    
-    <!-- Şarkı Fotoları -->
-    <img src="era7.jpg" alt="Era7capone Fotoğrafı" class="song-image">
-
-    <p><a href="https://open.spotify.com/intl-tr/artist/4UW9Hdsrx9kX2HdJ90jRKM?si=237df676c0f145aa" target="_blank">Spotify Profilini Ziyaret Et</a></p>
-    <p class="no-cap">Era7 No Cap</p>
+    <p>Era7Capone, gerçek adı Eray Durmuş olan genç bir rap sanatçısıdır...</p>
+    <p><a href="https://open.spotify.com/artist/4UW9Hdsrx9kX2HdJ90jRKM" target="_blank">Spotify Profilini Ziyaret Et</a></p>
   </div>
 
-  <div class="scroll-container">
-    <div class="container">
-      <!-- Song 1: Cıstak -->
-      <div class="song-box">
-        <img src="cıstak.jpg" alt="Era7capone - Cıstak" class="song-image">
-        <div class="song-title">Era7capone - Cıstak</div>
-        <div class="song-links">
-          <a href="https://open.spotify.com/intl-tr/track/0bvgWq2ZUhwwjLR1AMcQDs?si=5e755cc8ff72410c" target="_blank">Spotify'da Dinle</a>
-          <a href="https://youtu.be/kYmjM2p_NUQ?si=m6IS5z9NLlbA9B6f" target="_blank">YouTube'da Dinle</a>
-        </div>
-      </div>
-
-      <!-- Song 2: PİŞT -->
-      <div class="song-box">
-        <img src="pist.jpg" alt="Era7capone - PİŞT" class="song-image">
-        <div class="song-title">Era7capone - PİŞT</div>
-        <div class="song-links">
-          <a href="https://open.spotify.com/intl-tr/track/2ugG3itPOpM9IANApt473B?si=6e1b5dab3edb4baa" target="_blank">Spotify'da Dinle</a>
-          <a href="https://youtu.be/YxUlqj3rtk8?si=uvazkDZ8enzdFnez" target="_blank">YouTube'da Dinle</a>
-        </div>
-      </div>
-
-      <!-- Song 3: İNTİHAR -->
-      <div class="song-box">
-        <img src="intihar.jpg" alt="Era7capone - İNTİHAR" class="song-image">
-        <div class="song-title">Era7capone - İNTİHAR</div>
-        <div class="song-links">
-          <a href="https://open.spotify.com/intl-tr/track/0d8IQRHUFPOXsAVOPfDSgp?si=27b2285511fc419f" target="_blank">Spotify'da Dinle</a>
-          <a href="https://youtu.be/zDVeN7tYhz4?si=9KC1QlQrjkL2ch_4" target="_blank">YouTube'da Dinle</a>
-        </div>
-      </div>
-
-      <!-- Song 4: Illegale -->
-      <div class="song-box">
-        <img src="illegale.jpg" alt="Era7capone - Illegale" class="song-image">
-        <div class="song-title">Era7capone - İllegale</div>
-        <div class="song-links">
-          <a href="https://open.spotify.com/intl-tr/track/4pRi93z7c5HZVZzxjMKt6t?si=f94f05cd1a644e19" target="_blank">Spotify'da Dinle</a>
-          <a href="https://youtu.be/xe3scxkXpoI?si=e18dU2_RPryJr9tC" target="_blank">YouTube'da Dinle</a>
-        </div>
-      </div>
-
-      <!-- Song 5: Duruldum -->
-      <div class="song-box">
-        <img src="duruldum.jpg" alt="Era7capone - Duruldum" class="song-image">
-        <div class="song-title">Era7capone - Duruldum</div>
-        <div class="song-links">
-          <a href="https://open.spotify.com/intl-tr/track/24QL6OovqvjJ7cDxBd5Fwl?si=8700e1cd98294d21" target="_blank">Spotify'da Dinle</a>
-          <a href="https://youtu.be/0IX0oQN0R2o?si=USALPvVnOsrVFsy1" target="_blank">YouTube'da Dinle</a>
-        </div>
+  <div class="container">
+    <div class="song-box">
+      <img src="cıstak.jpg" alt="Era7capone - Cıstak" class="song-image">
+      <div class="song-title">Era7capone - Cıstak</div>
+      <div class="song-links">
+        <a href="https://open.spotify.com/track/0bvgWq2ZUhwwjLR1AMcQDs" target="_blank">Spotify'da Dinle</a>
+        <a href="https://youtu.be/kYmjM2p_NUQ" target="_blank">YouTube'da Dinle</a>
       </div>
     </div>
-  </div>
 
-  <div class="footer">
-    <p>Şarkıların devamı gelecek.</p>
-    <p>İletişim için <a href="https://www.instagram.com/ardaa.b7/" target="_blank">Instagram'a</a> basın.</p>
+    <div class="song-box">
+      <img src="pist.jpg" alt="Era7capone - PİŞT" class="song-image">
+      <div class="song-title">Era7capone - PİŞT</div>
+      <div class="song-links">
+        <a href="https://open.spotify.com/track/2ugG3itPOpM9IANApt473B" target="_blank">Spotify'da Dinle</a>
+        <a href="https://youtu.be/YxUlqj3rtk8" target="_blank">YouTube'da Dinle</a>
+      </div>
+    </div>
+
+    <div class="song-box">
+      <img src="bodrum_block.jpg" alt="Era7capone - Bodrum Block" class="song-image">
+      <div class="song-title">Era7capone - Bodrum Block</div>
+      <div class="song-links">
+        <a href="https://open.spotify.com/track/4Hh9M2x5GxY3M19JG9Lfr6" target="_blank">Spotify'da Dinle</a>
+        <a href="https://youtu.be/AoD67TfLX6k" target="_blank">YouTube'da Dinle</a>
+      </div>
+    </div>
+
+    <div class="song-box">
+      <img src="kan.jpg" alt="Era7capone - Kan" class="song-image">
+      <div class="song-title">Era7capone - Kan</div>
+      <div class="song-links">
+        <a href="https://open.spotify.com/track/1Zh3M4GxW8V6XyR5aAQR7G" target="_blank">Spotify'da Dinle</a>
+        <a href="https://youtu.be/3G2k1pQzBwE" target="_blank">YouTube'da Dinle</a>
+      </div>
+    </div>
+
+    <div class="song-box">
+      <img src="para.jpg" alt="Era7capone - Para Yapmakta" class="song-image">
+      <div class="song-title">Era7capone - Para Yapmakta</div>
+      <div class="song-links">
+        <a href="https://open.spotify.com/track/5LjJ7X2rVvF3MT6nN9Z8Rv" target="_blank">Spotify'da Dinle</a>
+        <a href="https://youtu.be/J89O5dTxQ_8" target="_blank">YouTube'da Dinle</a>
+      </div>
+    </div>
+
+    <div class="song-box">
+      <img src="no_cap.jpg" alt="Era7capone - No Cap" class="song-image">
+      <div class="song-title">Era7capone - No Cap</div>
+      <div class="song-links">
+        <a href="https://open.spotify.com/track/6Zx6J1g5Jq9lZP3aKX5X9P" target="_blank">Spotify'da Dinle</a>
+        <a href="https://youtu.be/2QKf8ZtF5oM" target="_blank">YouTube'da Dinle</a>
+      </div>
+    </div>
   </div>
 
 </body>
