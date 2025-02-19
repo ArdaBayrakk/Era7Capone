@@ -8,12 +8,23 @@
     /* Temel Stil */
     body {
       font-family: Arial, sans-serif;
-      background-color: #121212;
       margin: 0;
       padding: 0;
       overflow-x: hidden;
       transition: background-color 0.3s, color 0.3s;
     }
+
+    /* Karanlık Mod ve Açık Mod */
+    body.dark-mode {
+      background-color: #121212; /* Karanlık mod arka plan */
+      color: #eaeaea;
+    }
+
+    body.light-mode {
+      background-color: #ffffff; /* Açık mod arka plan */
+      color: #121212;
+    }
+
     .container {
       display: flex;
       flex-direction: column;
@@ -21,6 +32,7 @@
       margin-top: 20px;
       width: 100%;
     }
+
     .song-box {
       background-color: #333;
       margin: 10px;
@@ -32,14 +44,17 @@
       transition: transform 0.3s ease;
       margin-bottom: 20px;
     }
+
     .song-box:hover {
       transform: translateY(-10px);
     }
+
     .song-title {
       font-size: 18px;
       font-weight: bold;
       margin-bottom: 10px;
     }
+
     .song-links a {
       display: block;
       margin: 5px 0;
@@ -47,15 +62,18 @@
       color: #1DB954;
       font-size: 14px;
     }
+
     .song-links a:hover {
       color: #1A803D;
     }
+
     .song-image {
       width: 100%;
       height: auto;
       border-radius: 5px;
       margin-bottom: 10px;
     }
+
     .scroll-container {
       max-height: 600px;
       overflow-y: scroll;
@@ -65,6 +83,7 @@
       display: flex;
       justify-content: center;
     }
+
     .by-arda {
       position: fixed;
       top: 10px;
@@ -74,43 +93,25 @@
       cursor: pointer;
       text-decoration: none;
     }
+
     .by-arda:hover {
       text-decoration: underline;
     }
+
     .footer {
       text-align: center;
       margin-top: 40px;
       font-size: 16px;
       color: #eaeaea;
     }
+
     .footer a {
       color: blue;
       text-decoration: none;
     }
+
     .footer a:hover {
       text-decoration: underline;
-    }
-
-    /* Karanlık Mod */
-    body.dark-mode {
-      background-color: #121212;
-      color: #eaeaea;
-    }
-    .song-box.dark-mode {
-      background-color: #333;
-      color: #eaeaea;
-    }
-    .song-links a.dark-mode {
-      color: #1DB954;
-    }
-    .song-links a.dark-mode:hover {
-      color: #1A803D;
-    }
-    .by-arda.dark-mode {
-      color: #1DB954;
-    }
-    .footer.dark-mode {
-      color: #eaeaea;
     }
 
     /* Menü Butonu ve Açılır Menü */
@@ -122,9 +123,11 @@
       color: white;
       cursor: pointer;
     }
+
     .menu:hover {
       text-decoration: underline;
     }
+
     .menu-options {
       position: absolute;
       top: 50px;
@@ -136,23 +139,28 @@
       display: none;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
+
     .menu-options a {
       color: white;
       text-decoration: none;
       margin: 5px 0;
       display: block;
     }
+
     .menu-options a:hover {
       color: #1DB954;
     }
+
     /* Mobil responsive */
     @media (max-width: 768px) {
       .song-box {
         width: 90%;
       }
+
       .song-title {
         font-size: 16px;
       }
+
       .song-links a {
         font-size: 12px;
       }
@@ -166,7 +174,7 @@
     }
   </style>
 </head>
-<body>
+<body class="dark-mode"> <!-- Varsayılan olarak karanlık modla başlar -->
 
   <!-- Menü Butonu -->
   <div class="menu" onclick="toggleMenu()">&#x2022;&#x2022;&#x2022;</div>
@@ -175,7 +183,7 @@
   </div>
 
   <!-- By ArdaBayrak -->
-  <a href="https://www.instagram.com/ardaa.b7/" class="by-arda" target="_blank">ArdaBayrak</a>
+  <a href="https://www.instagram.com/ardaa.b7" class="by-arda" target="_blank">ArdaBayrak</a>
 
   <div class="scroll-container">
     <div class="container">
@@ -243,21 +251,26 @@
       menuOptions.style.display = menuOptions.style.display === 'block' ? 'none' : 'block';
     }
 
-    // Karanlık mod geçişi
+    // Karanlık mod ve açık mod geçişi
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');
+      document.body.classList.toggle('light-mode');
       const songBoxes = document.querySelectorAll('.song-box');
       songBoxes.forEach(box => {
         box.classList.toggle('dark-mode');
+        box.classList.toggle('light-mode');
       });
       const songLinks = document.querySelectorAll('.song-links a');
       songLinks.forEach(link => {
         link.classList.toggle('dark-mode');
+        link.classList.toggle('light-mode');
       });
       const byArda = document.querySelector('.by-arda');
       byArda.classList.toggle('dark-mode');
+      byArda.classList.toggle('light-mode');
       const footer = document.querySelector('.footer');
       footer.classList.toggle('dark-mode');
+      footer.classList.toggle('light-mode');
     }
   </script>
 </body>
