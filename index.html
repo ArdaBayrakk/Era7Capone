@@ -8,14 +8,12 @@
     /* Temel Stil */
     body {
       font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
       margin: 0;
       padding: 0;
       overflow-x: hidden;
-      background-color: #121212; /* Her zaman karanlık mod */
-      color: #eaeaea;
       transition: background-color 0.3s, color 0.3s;
     }
-
     .container {
       display: flex;
       flex-direction: column;
@@ -23,9 +21,8 @@
       margin-top: 20px;
       width: 100%;
     }
-
     .song-box {
-      background-color: #333;
+      background-color: #fff;
       margin: 10px;
       padding: 20px;
       width: 250px;
@@ -35,17 +32,14 @@
       transition: transform 0.3s ease;
       margin-bottom: 20px;
     }
-
     .song-box:hover {
       transform: translateY(-10px);
     }
-
     .song-title {
       font-size: 18px;
       font-weight: bold;
       margin-bottom: 10px;
     }
-
     .song-links a {
       display: block;
       margin: 5px 0;
@@ -53,26 +47,15 @@
       color: #1DB954;
       font-size: 14px;
     }
-
     .song-links a:hover {
       color: #1A803D;
     }
-
     .song-image {
       width: 100%;
       height: auto;
       border-radius: 5px;
       margin-bottom: 10px;
     }
-
-    .era7-image {
-      width: 250px; /* Şarkı fotoğrafı ile aynı boyutta */
-      height: 250px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-    }
-
     .scroll-container {
       max-height: 600px;
       overflow-y: scroll;
@@ -82,7 +65,6 @@
       display: flex;
       justify-content: center;
     }
-
     .by-arda {
       position: fixed;
       top: 10px;
@@ -92,72 +74,43 @@
       cursor: pointer;
       text-decoration: none;
     }
-
     .by-arda:hover {
       text-decoration: underline;
     }
-
     .footer {
       text-align: center;
       margin-top: 40px;
       font-size: 16px;
-      color: #eaeaea;
+      color: #333;
     }
-
     .footer a {
       color: blue;
       text-decoration: none;
     }
-
     .footer a:hover {
       text-decoration: underline;
     }
 
-    /* Menü Butonu ve Açılır Menü */
-    .menu {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      font-size: 30px;
-      color: white;
-      cursor: pointer;
+    /* Karanlık Mod */
+    body.dark-mode {
+      background-color: #121212;
+      color: #eaeaea;
     }
-
-    .menu:hover {
-      text-decoration: underline;
-    }
-
-    .menu-options {
-      position: absolute;
-      top: 50px;
-      left: 20px;
+    .song-box.dark-mode {
       background-color: #333;
-      color: white;
-      border-radius: 5px;
-      padding: 10px;
-      display: none;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      color: #eaeaea;
     }
-
-    .menu-options a {
-      color: white;
-      text-decoration: none;
-      margin: 5px 0;
-      display: block;
-    }
-
-    .menu-options a:hover {
+    .song-links a.dark-mode {
       color: #1DB954;
     }
-
-    /* Şeffaf "Era7 no cap" yazısı */
-    .era7-text {
-      font-size: 24px;
-      font-weight: bold;
-      color: rgba(234, 234, 234, 0.5); /* Şeffaf beyaz renk */
-      position: fixed;
-      top: 20px;
-      left: 20px;
+    .song-links a.dark-mode:hover {
+      color: #1A803D;
+    }
+    .by-arda.dark-mode {
+      color: #1DB954;
+    }
+    .footer.dark-mode {
+      color: #eaeaea;
     }
 
     /* Mobil responsive */
@@ -165,11 +118,9 @@
       .song-box {
         width: 90%;
       }
-
       .song-title {
         font-size: 16px;
       }
-
       .song-links a {
         font-size: 12px;
       }
@@ -183,21 +134,9 @@
     }
   </style>
 </head>
-<body> <!-- Her zaman karanlık modda -->
+<body>
 
-  <!-- Şeffaf Era7 no cap yazısı -->
-  <div class="era7-text">Era7 no cap</div>
-
-  <!-- By ArdaBayrak -->
-  <a href="https://www.instagram.com/ardaa.b7/" class="by-arda" target="_blank">ArdaBayrak</a>
-
-  <!-- Era7capone Fotoğrafı -->
-  <div class="container">
-    <a href="https://open.spotify.com/intl-tr/artist/4UW9Hdsrx9kX2HdJ90jRKM?si=d7ea9033b8af4f65" target="_blank">
-      <img src="era7.jpg" alt="Era7capone" class="era7-image">
-    </a>
-    <div class="song-title">Profile Git</div>
-  </div>
+  <a href="https://www.instagram.com/ardabayrak/" class="by-arda" target="_blank">ArdaBayrak</a>
 
   <div class="scroll-container">
     <div class="container">
@@ -220,12 +159,68 @@
           <a href="https://youtu.be/YxUlqj3rtk8?si=uvazkDZ8enzdFnez" target="_blank">YouTube'da Dinle</a>
         </div>
       </div>
+
+      <!-- Song 3: İNTİHAR -->
+      <div class="song-box">
+        <img src="intihar.jpg" alt="Era7capone - İNTİHAR" class="song-image">
+        <div class="song-title">Era7capone - İNTİHAR</div>
+        <div class="song-links">
+          <a href="https://open.spotify.com/intl-tr/track/0d8IQRHUFPOXsAVOPfDSgp?si=27b2285511fc419f" target="_blank">Spotify'da Dinle</a>
+          <a href="https://youtu.be/zDVeN7tYhz4?si=9KC1QlQrjkL2ch_4" target="_blank">YouTube'da Dinle</a>
+        </div>
+      </div>
+
+      <!-- Song 4: Illegale -->
+      <div class="song-box">
+        <img src="illegale.jpg" alt="Era7capone - Illegale" class="song-image">
+        <div class="song-title">Era7capone - Illegale</div>
+        <div class="song-links">
+          <a href="https://open.spotify.com/intl-tr/track/4z4mI7YYkt1e5XjFTCyk14?si=cd53e9ad764c4444" target="_blank">Spotify'da Dinle</a>
+          <a href="https://youtu.be/5UDD2OypnU8?si=C9BstX4UvWaUl9zP" target="_blank">YouTube'da Dinle</a>
+        </div>
+      </div>
+
+      <!-- Song 5: Duruldum -->
+      <div class="song-box">
+        <img src="duruldum.jpg" alt="Era7capone - Duruldum" class="song-image">
+        <div class="song-title">Era7capone - Duruldum</div>
+        <div class="song-links">
+          <a href="https://open.spotify.com/track/24QL6OovqvjJ7cDxBd5Fwl" target="_blank">Spotify'da Dinle</a>
+          <a href="https://youtu.be/0IX0oQN0R2o" target="_blank">YouTube'da Dinle</a>
+        </div>
+      </div>
+
     </div>
   </div>
 
   <div class="footer">
-    <p>Şarkıların devamı gelecek.</p>
-    <p>İletişim için <a href="https://www.instagram.com/ardaa.b7/" target="_blank">Instagram'a</a> basın.</p>
+    <p>Şarkıların devamı gelecek, bizi takip edin.</p>
+    <p>İletişim için <a href="https://www.instagram.com/ardabayrak/" target="_blank">Instagram'a</a> basın.</p>
   </div>
+
+  <script>
+    // Karanlık mod geçişi
+    const currentMode = localStorage.getItem('theme') || 'light';
+    if (currentMode === 'dark') {
+      document.body.classList.add('dark-mode');
+      document.querySelectorAll('.song-box').forEach(box => box.classList.add('dark-mode'));
+      document.querySelectorAll('.song-links a').forEach(link => link.classList.add('dark-mode'));
+      document.querySelector('.by-arda').classList.add('dark-mode');
+      document.querySelector('.footer').classList.add('dark-mode');
+    }
+
+    // Karanlık mod değiştirme fonksiyonu
+    function toggleDarkMode() {
+      const isDark = document.body.classList.toggle('dark-mode');
+      document.querySelectorAll('.song-box').forEach(box => box.classList.toggle('dark-mode', isDark));
+      document.querySelectorAll('.song-links a').forEach(link => link.classList.toggle('dark-mode', isDark));
+      document.querySelector('.by-arda').classList.toggle('dark-mode', isDark);
+      document.querySelector('.footer').classList.toggle('dark-mode', isDark);
+
+      // Yerel depolama ile tercih kaydetme
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+  </script>
+
 </body>
 </html>
