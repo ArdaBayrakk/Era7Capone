@@ -11,18 +11,9 @@
       margin: 0;
       padding: 0;
       overflow-x: hidden;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    /* Karanlık Mod ve Açık Mod */
-    body.dark-mode {
-      background-color: #121212; /* Karanlık mod arka plan */
+      background-color: #121212; /* Her zaman karanlık mod */
       color: #eaeaea;
-    }
-
-    body.light-mode {
-      background-color: #ffffff; /* Açık mod arka plan */
-      color: #121212;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     .container {
@@ -174,16 +165,23 @@
     }
   </style>
 </head>
-<body class="dark-mode"> <!-- Varsayılan olarak karanlık modla başlar -->
+<body> <!-- Her zaman karanlık modda -->
 
   <!-- Menü Butonu -->
   <div class="menu" onclick="toggleMenu()">&#x2022;&#x2022;&#x2022;</div>
   <div class="menu-options" id="menuOptions">
-    <a href="#" onclick="toggleDarkMode()">Karanlık Modu Aç/Kapat</a>
+    <a href="#" onclick="openNewTab()">Yeni Sekme Aç</a>
+    <a href="#" onclick="closeWindow()">Tarayıcıyı Kapat</a>
+    <a href="https://open.spotify.com/intl-tr/artist/4UW9Hdsrx9kX2HdJ90jRKM?si=d7ea9033b8af4f65" target="_blank">Era7capone Spotify Profiline Git</a>
   </div>
 
   <!-- By ArdaBayrak -->
-  <a href="https://www.instagram.com/ardaa.b7" class="by-arda" target="_blank">ArdaBayrak</a>
+  <a href="https://www.instagram.com/ardabayrak/" class="by-arda" target="_blank">ArdaBayrak</a>
+
+  <!-- Era7capone Fotoğrafı -->
+  <div class="container">
+    <img src="era7.jpg" alt="Era7capone" class="song-image">
+  </div>
 
   <div class="scroll-container">
     <div class="container">
@@ -240,8 +238,8 @@
   </div>
 
   <div class="footer">
-    <p>Şarkıların devamı gelecek.</p>
-    <p>İletişim için <a href="https://www.instagram.com/ardaa.b7/" target="_blank">Instagram'a</a> basın.</p>
+    <p>Şarkıların devamı gelecek, bizi takip edin.</p>
+    <p>İletişim için <a href="https://www.instagram.com/ardabayrak/" target="_blank">Instagram'a</a> basın.</p>
   </div>
 
   <script>
@@ -251,26 +249,14 @@
       menuOptions.style.display = menuOptions.style.display === 'block' ? 'none' : 'block';
     }
 
-    // Karanlık mod ve açık mod geçişi
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-      document.body.classList.toggle('light-mode');
-      const songBoxes = document.querySelectorAll('.song-box');
-      songBoxes.forEach(box => {
-        box.classList.toggle('dark-mode');
-        box.classList.toggle('light-mode');
-      });
-      const songLinks = document.querySelectorAll('.song-links a');
-      songLinks.forEach(link => {
-        link.classList.toggle('dark-mode');
-        link.classList.toggle('light-mode');
-      });
-      const byArda = document.querySelector('.by-arda');
-      byArda.classList.toggle('dark-mode');
-      byArda.classList.toggle('light-mode');
-      const footer = document.querySelector('.footer');
-      footer.classList.toggle('dark-mode');
-      footer.classList.toggle('light-mode');
+    // Yeni sekme açma
+    function openNewTab() {
+      window.open('https://www.spotify.com', '_blank');
+    }
+
+    // Tarayıcıyı kapatma (tarayıcı güvenliği nedeniyle bazı tarayıcılar bu işlemi engeller)
+    function closeWindow() {
+      window.close();
     }
   </script>
 </body>
