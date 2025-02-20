@@ -39,9 +39,21 @@
       text-decoration: none;
       color: #1DB954;
       font-size: 16px;
+      padding-left: 25px; /* Logos'a yakınlaştırma */
+      position: relative;
     }
     .song-links a:hover {
       color: #1A803D;
+    }
+    .song-links a .logo {
+      position: absolute;
+      left: 0;
+      top: 5px; /* Logoları biraz aşağıya kaydırma */
+      width: 18px;
+      height: 18px;
+      margin-right: 10px;
+      border-radius: 50%;
+      object-fit: cover;
     }
     .song-image {
       width: 100%;
@@ -84,13 +96,6 @@
     }
     .profile a:hover {
       text-decoration: underline;
-    }
-    .logo {
-      width: 20px;
-      height: 20px;
-      margin-right: 10px;
-      border-radius: 50%;
-      object-fit: cover;
     }
   </style>
 </head>
