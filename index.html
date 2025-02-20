@@ -32,9 +32,6 @@
       font-size: 22px;
       font-weight: bold;
       margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
     .song-links a {
       display: block;
@@ -42,9 +39,6 @@
       text-decoration: none;
       color: #1DB954;
       font-size: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
     .song-links a:hover {
       color: #1A803D;
@@ -92,17 +86,16 @@
       text-decoration: underline;
     }
     .logo {
-      width: 18px;
-      height: 18px;
-      margin-right: 8px;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
       border-radius: 50%;
       object-fit: cover;
+      background-color: transparent; /* Şeffaf arka plan */
     }
-    .spotify-logo {
-      border-radius: 25%;
-    }
-    .youtube-logo {
-      border-radius: 50%;
+    /* Şarkı isminin yanındaki logoyu kaldır */
+    .song-links img {
+      display: none;
     }
   </style>
 </head>
@@ -120,114 +113,65 @@
   <!-- Şarkılar -->
   <div class="song-box">
     <img src="cıstak.jpg" alt="Era7capone - Cıstak" class="song-image">
-    <div class="song-title">
-      <img src="spotify-logo.jpg" alt="Spotify Logo" class="logo spotify-logo">
-      Era7capone - Cıstak
-    </div>
+    <div class="song-title">Era7capone - Cıstak</div>
     <div class="song-links">
-      <a href="https://open.spotify.com/track/0bvgWq2ZUhwwjLR1AMcQDs" target="_blank">
-        <img src="spotify-logo.jpg" alt="Spotify Logo" class="logo spotify-logo">Spotify'da Dinle
-      </a>
-      <a href="https://youtu.be/kYmjM2p_NUQ" target="_blank">
-        <img src="youtube-logo.png" alt="YouTube Logo" class="logo youtube-logo">YouTube'da Dinle
-      </a>
+      <a href="https://open.spotify.com/track/0bvgWq2ZUhwwjLR1AMcQDs" target="_blank">Spotify'da Dinle</a>
+      <a href="https://youtu.be/kYmjM2p_NUQ" target="_blank">YouTube'da Dinle</a>
     </div>
   </div>
 
   <div class="song-box">
     <img src="pist.jpg" alt="Era7capone - PİŞT" class="song-image">
-    <div class="song-title">
-      <img src="spotify-logo.jpg" alt="Spotify Logo" class="logo spotify-logo">
-      Era7capone - PİŞT
-    </div>
+    <div class="song-title">Era7capone - PİŞT</div>
     <div class="song-links">
-      <a href="https://open.spotify.com/track/2ugG3itPOpM9IANApt473B" target="_blank">
-        <img src="spotify-logo.jpg" alt="Spotify Logo" class="logo spotify-logo">Spotify'da Dinle
-      </a>
-      <a href="https://youtu.be/YxUlqj3rtk8" target="_blank">
-        <img src="youtube-logo.png" alt="YouTube Logo" class="logo youtube-logo">YouTube'da Dinle
-      </a>
+      <a href="https://open.spotify.com/track/2ugG3itPOpM9IANApt473B" target="_blank">Spotify'da Dinle</a>
+      <a href="https://youtu.be/YxUlqj3rtk8" target="_blank">YouTube'da Dinle</a>
     </div>
   </div>
 
   <div class="song-box">
     <img src="intihar.jpg" alt="Era7capone - İNTİHAR" class="song-image">
-    <div class="song-title">
-      <img src="spotify-logo.jpg" alt="Spotify Logo" class="logo spotify-logo">
-      Era7capone - İNTİHAR
-    </div>
+    <div class="song-title">Era7capone - İNTİHAR</div>
     <div class="song-links">
-      <a href="https://open.spotify.com/track/0d8IQRHUFPOXsAVOPfDSgp" target="_blank">
-        <img src="spotify-logo.jpg" alt="Spotify Logo" class="logo spotify-logo">Spotify'da Dinle
-      </a>
-      <a href="https://youtu.be/zDVeN7tYhz4" target="_blank">
-        <img src="youtube-logo.png" alt="YouTube Logo" class="logo youtube-logo">YouTube'da Dinle
-      </a>
+      <a href="https://open.spotify.com/track/0d8IQRHUFPOXsAVOPfDSgp" target="_blank">Spotify'da Dinle</a>
+      <a href="https://youtu.be/zDVeN7tYhz4" target="_blank">YouTube'da Dinle</a>
     </div>
   </div>
 
   <div class="song-box">
     <img src="parayapmakta.jpg" alt="Era7capone - Para Yapmakta" class="song-image">
-    <div class="song-title">
-      <img src="spotify-logo.jpg" alt="Spotify Logo" class="logo spotify-logo">
-      Era7capone - Para Yapmakta
-    </div>
+    <div class="song-title">Era7capone - Para Yapmakta</div>
     <div class="song-links">
-      <a href="https://open.spotify.com/intl-tr/track/3eUvn9bLIm6sBjuvUrj3tl?si=11d86c95d3534652" target="_blank">
-        <img src="spotify-logo.jpg" alt="Spotify Logo" class="logo spotify-logo">Spotify'da Dinle
-      </a>
-      <a href="https://youtu.be/oqlfv5dDA7Q?si=RGy36o4QCq-yxLYd" target="_blank">
-        <img src="youtube-logo.png" alt="YouTube Logo" class="logo youtube-logo">YouTube'da Dinle
-      </a>
+      <a href="https://open.spotify.com/intl-tr/track/3eUvn9bLIm6sBjuvUrj3tl?si=11d86c95d3534652" target="_blank">Spotify'da Dinle</a>
+      <a href="https://youtu.be/oqlfv5dDA7Q?si=RGy36o4QCq-yxLYd" target="_blank">YouTube'da Dinle</a>
     </div>
   </div>
 
   <div class="song-box">
     <img src="mahalle.jpg" alt="Eray067 Feat. Era7capone - Mahalle" class="song-image">
-    <div class="song-title">
-      <img src="spotify-logo.jpg" alt="Spotify Logo" class="logo spotify-logo">
-      Eray067 Feat. Era7capone - Mahalle
-    </div>
+    <div class="song-title">Eray067 Feat. Era7capone - Mahalle</div>
     <div class="song-links">
-      <a href="https://open.spotify.com/intl-tr/track/2FTDCfVL9LpLOjwAXMmFOH?si=6eedb3744d3246e4" target="_blank">
-        <img src="spotify-logo.jpg" alt="Spotify Logo" class="logo spotify-logo">Spotify'da Dinle
-      </a>
-      <a href="https://youtu.be/mLE7YKqD_zg?si=T8LtUAF9qGHETQgV" target="_blank">
-        <img src="youtube-logo.png" alt="YouTube Logo" class="logo youtube-logo">YouTube'da Dinle
-      </a>
+      <a href="https://open.spotify.com/intl-tr/track/2FTDCfVL9LpLOjwAXMmFOH?si=6eedb3744d3246e4" target="_blank">Spotify'da Dinle</a>
+      <a href="https://youtu.be/mLE7YKqD_zg?si=T8LtUAF9qGHETQgV" target="_blank">YouTube'da Dinle</a>
     </div>
   </div>
 
   <!-- Duruldum ve Illegale Şarkıları -->
   <div class="song-box">
     <img src="duruldum.jpg" alt="Era7capone - Duruldum" class="song-image">
-    <div class="song-title">
-      <img src="spotify-logo.jpg" alt="Spotify Logo" class="logo spotify-logo">
-      Era7capone - Duruldum
-    </div>
+    <div class="song-title">Era7capone - Duruldum</div>
     <div class="song-links">
-      <a href="https://open.spotify.com/intl-tr/track/24QL6OovqvjJ7cDxBd5Fwl?si=e340f36899dd48a9" target="_blank">
-        <img src="spotify-logo.jpg" alt="Spotify Logo" class="logo spotify-logo">Spotify'da Dinle
-      </a>
-      <a href="https://youtu.be/0IX0oQN0R2o?si=gYyZjMBw6ke1Z7gy" target="_blank">
-        <img src="youtube-logo.png" alt="YouTube Logo" class="logo youtube-logo">YouTube'da Dinle
-      </a>
+      <a href="https://open.spotify.com/intl-tr/track/24QL6OovqvjJ7cDxBd5Fwl?si=e340f36899dd48a9" target="_blank">Spotify'da Dinle</a>
+      <a href="https://youtu.be/0IX0oQN0R2o?si=gYyZjMBw6ke1Z7gy" target="_blank">YouTube'da Dinle</a>
     </div>
   </div>
 
   <div class="song-box">
     <img src="illegale.jpg" alt="Era7capone - İllegale" class="song-image">
-    <div class="song-title">
-      <img src="spotify-logo.jpg" alt="Spotify Logo" class="logo spotify-logo">
-      Era7capone - İllegale
-    </div>
+    <div class="song-title">Era7capone - İllegale</div>
     <div class="song-links">
-      <a href="https://open.spotify.com/intl-tr/track/4z4mI7YYkt1e5XjFTCyk14?si=f484a55c4c5e49b0" target="_blank">
-        <img src="spotify-logo.jpg" alt="Spotify Logo" class="logo spotify-logo">Spotify'da Dinle
-      </a>
-      <a href="https://youtu.be/5UDD2OypnU8?si=yBwuhzDH05K08_Nr" target="_blank">
-        <img src="youtube-logo.png" alt="YouTube Logo" class="logo youtube-logo">YouTube'da Dinle
-      </a>
+      <a href="https://open.spotify.com/intl-tr/track/4z4mI7YYkt1e5XjFTCyk14?si=f484a55c4c5e49b0" target="_blank">Spotify'da Dinle</a>
+      <a href="https://youtu.be/5UDD2OypnU8?si=yBwuhzDH05K08_Nr" target="_blank">YouTube'da Dinle</a>
     </div>
   </div>
 
